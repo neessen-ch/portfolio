@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Christof Neessen — Grafik &amp; UX/UI Design</title>
+  <meta name="description" content="Portfolio von Christof Neessen — Branding, Packaging, UX/UI und digitales Design mit Liebe zum Detail." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Scroll Progress -->
+  <div class="scroll-progress" aria-hidden="true"></div>
+
+  <!-- Custom Cursor -->
+  <div class="cursor" aria-hidden="true"></div>
+  <div class="cursor-dot" aria-hidden="true"></div>
+
+  <!-- Navigation -->
+  <header class="nav">
+    <a href="#top" class="nav__logo">
+      <img class="sparkle sparkle--small" src="assets/Sterne-01.svg" alt="" />
+      <span>Christof Neessen</span>
+    </a>
+    <nav class="nav__links">
+      <a href="#about" data-link>Über mich</a>
+      <a href="#skills" data-link>Skills</a>
+      <a href="#tools" data-link>Tools</a>
+      <a href="#work" data-link>Projekte</a>
+      <a href="#contact" data-link class="nav__cta">Kontakt →</a>
+    </nav>
+    <button class="nav__burger" aria-label="Menü öffnen">
+      <span></span><span></span>
+    </button>
+  </header>
+
+  <!-- Hero -->
+  <section id="top" class="hero">
+    <div class="hero__bg-text" aria-hidden="true">PORTFOLIO 2026</div>
+
+    <div class="hero__inner">
+      <div class="hero__sparkle">
+        <img src="assets/Sterne-02.svg" alt="" />
+      </div>
+      <div class="hero__sparkle hero__sparkle--alt" aria-hidden="true">
+        <img src="assets/Sterne-03.svg" alt="" />
+      </div>
+
+      <h1 class="hero__title">
+        <span class="hero__line" data-reveal>Christof</span>
+        <span class="hero__line" data-reveal>Neessen</span>
+      </h1>
+      <p class="hero__tagline" data-reveal>
+        Ich gestalte
+        <span class="word-cycle" data-words="Branding,Packaging,UX/UI Design,Landingpages,Webshops,digitalen Content">
+          <span class="word-cycle__current">Branding</span>
+        </span>
+        mit Liebe zum Detail.
+      </p>
+
+      <div class="hero__meta" data-reveal>
+        <div class="hero__meta-item">
+          <span class="hero__meta-label">Standort</span>
+          <span class="hero__meta-value">Köln, DE</span>
+        </div>
+        <div class="hero__meta-item">
+          <span class="hero__meta-label">Erfahrung</span>
+          <span class="hero__meta-value">7+ Jahre</span>
+        </div>
+        <div class="hero__meta-item">
+          <span class="hero__meta-label">Verfügbar</span>
+          <span class="hero__meta-value"><span class="dot"></span>Für Projekte</span>
+        </div>
+      </div>
+
+      <div class="hero__actions" data-reveal>
+        <a href="#work" class="btn btn--primary" data-magnetic>
+          Projekte ansehen
+          <svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+        <a href="#contact" class="btn btn--ghost" data-magnetic>Kontakt aufnehmen</a>
+      </div>
+    </div>
+
+    <div class="hero__scroll" aria-hidden="true">
+      <span>Scroll</span>
+      <div class="hero__scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- Marquee -->
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee__track">
+      <span>Branding ✦ Packaging Design ✦ UX/UI Design ✦ Landingpages ✦ Webshop ✦ Conversionoptimierung ✦ Digitale Kampagnen ✦ Newsletter ✦ Visual Identity ✦</span>
+      <span>Branding ✦ Packaging Design ✦ UX/UI Design ✦ Landingpages ✦ Webshop ✦ Conversionoptimierung ✦ Digitale Kampagnen ✦ Newsletter ✦ Visual Identity ✦</span>
+    </div>
+  </div>
+
+  <!-- About -->
+  <section id="about" class="about">
+    <div class="container about__grid">
+      <div class="about__media" data-reveal>
+        <div class="about__photo">
+          <img src="assets/christof-portrait.png" alt="Porträt von Christof Neessen" />
+        </div>
+        <img class="about__deco" src="assets/Sterne-03.svg" alt="" />
+      </div>
+
+      <div class="about__content">
+        <span class="eyebrow" data-reveal>01 — Über mich</span>
+        <h2 class="section-title" data-reveal>
+          Designer aus Leidenschaft. <br/>
+          <span class="text-blue">Mit Auge fürs Detail.</span>
+        </h2>
+        <p class="about__lead" data-reveal>
+          Seit über sieben Jahren gestalte ich Marken, Produkte und digitale
+          Erlebnisse, die nicht nur gut aussehen — sondern wirken. Aktuell
+          erweitere ich mein Spektrum mit einer UX/UI-Weiterbildung an der
+          Onlineschule für Gestaltung.
+        </p>
+
+        <div class="about__contact" data-reveal>
+          <a href="mailto:christofneessen@gmail.com" class="contact-card contact-card--lead">
+            <span class="contact-card__label">Schreib mir</span>
+            <span class="contact-card__value">christofneessen@gmail.com</span>
+            <svg class="contact-card__arrow" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          </a>
+        </div>
+
+        <div class="languages" data-reveal>
+          <h3 class="languages__title">Sprachen</h3>
+          <ul class="languages__list">
+            <li><span>Deutsch</span><span class="dots" data-level="5"></span></li>
+            <li><span>Englisch</span><span class="dots" data-level="4.5"></span></li>
+            <li><span>Französisch</span><span class="dots" data-level="3.5"></span></li>
+            <li><span>Spanisch</span><span class="dots" data-level="1.5"></span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills (Disziplinen) -->
+  <section id="skills" class="disciplines">
+    <div class="container">
+      <div class="disciplines__head">
+        <span class="eyebrow" data-reveal>02 — Skills</span>
+        <h2 class="section-title section-title--lg" data-reveal>
+          Was ich <br/>
+          <span class="text-blue">am besten kann.</span>
+        </h2>
+      </div>
+
+      <ul class="disciplines__list">
+        <li class="discipline" data-reveal>
+          <span class="discipline__num">01</span>
+          <h3 class="discipline__title">Branding &amp; Identity</h3>
+          <p class="discipline__desc">Visuelle Markenwelten von Logo, Farb- und Typo-System bis zum kompletten Markenleitfaden.</p>
+        </li>
+        <li class="discipline" data-reveal>
+          <span class="discipline__num">02</span>
+          <h3 class="discipline__title">Packaging &amp; Print</h3>
+          <p class="discipline__desc">Verpackungsdesign, Etiketten, Druckdaten — von der Skizze bis zur reibungslosen Produktion.</p>
+        </li>
+        <li class="discipline" data-reveal>
+          <span class="discipline__num">03</span>
+          <h3 class="discipline__title">Digital &amp; E-Commerce</h3>
+          <p class="discipline__desc">Webshops, Landingpages und UX/UI mit Fokus auf Conversion und klarer Information Architecture.</p>
+        </li>
+        <li class="discipline" data-reveal>
+          <span class="discipline__num">04</span>
+          <h3 class="discipline__title">Content &amp; Social-Media</h3>
+          <p class="discipline__desc">Visuelle Systeme für Instagram, Newsletter und digitale Kampagnen — konsistent über alle Kanäle.</p>
+        </li>
+        <li class="discipline" data-reveal>
+          <span class="discipline__num">05</span>
+          <h3 class="discipline__title">KI &amp; Workflow</h3>
+          <p class="discipline__desc">Integration moderner KI-Tools in den Design-Prozess — schneller von der Idee zum fertigen Asset.</p>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Tools -->
+  <section id="tools" class="skills">
+    <div class="container">
+      <div class="skills__head">
+        <span class="eyebrow" data-reveal>03 — Tools</span>
+        <h2 class="section-title" data-reveal>
+          Womit ich <br/>
+          <span class="text-blue">arbeite.</span>
+        </h2>
+      </div>
+
+      <div class="skills__grid skills__grid--3">
+        <article class="skill-card" data-reveal>
+          <div class="skill-card__icon">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M4 4h16v16H4z M4 12h16 M12 4v16" stroke="currentColor" stroke-width="1.5"/></svg>
+          </div>
+          <h3>Design</h3>
+          <ul>
+            <li>Figma</li>
+            <li>InDesign</li>
+            <li>Illustrator</li>
+            <li>Photoshop</li>
+            <li>Premiere</li>
+          </ul>
+        </article>
+
+        <article class="skill-card" data-reveal>
+          <div class="skill-card__icon">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M12 3 L21 12 L12 21 L3 12 Z M12 8v8 M8 12h8" stroke="currentColor" stroke-width="1.5"/></svg>
+          </div>
+          <h3>KI &amp; AI</h3>
+          <ul>
+            <li>Claude</li>
+            <li>Nano Banana</li>
+            <li>Lovable</li>
+          </ul>
+        </article>
+
+        <article class="skill-card" data-reveal>
+          <div class="skill-card__icon">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M3 6h18 M3 12h18 M3 18h18" stroke="currentColor" stroke-width="1.5"/></svg>
+          </div>
+          <h3>Web &amp; CMS</h3>
+          <ul>
+            <li>Shopify</li>
+            <li>WordPress</li>
+            <li>Claude Code</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Work -->
+  <section id="work" class="work">
+    <div class="container">
+      <div class="work__head">
+        <span class="eyebrow" data-reveal>04 — Ausgewählte Projekte</span>
+        <h2 class="section-title section-title--lg" data-reveal>
+          Arbeit, auf die <br/>
+          <span class="text-blue">ich stolz bin.</span>
+        </h2>
+      </div>
+
+      <div class="work__filter" data-reveal role="tablist" aria-label="Projektkategorien">
+        <button type="button" class="filter-btn is-active" data-filter="all" role="tab" aria-selected="true">Alle</button>
+        <button type="button" class="filter-btn" data-filter="branding" role="tab">Branding</button>
+        <button type="button" class="filter-btn" data-filter="packaging" role="tab">Packaging</button>
+        <button type="button" class="filter-btn" data-filter="ux-ui" role="tab">UX/UI</button>
+        <button type="button" class="filter-btn" data-filter="digital" role="tab">Digitaler Content</button>
+        <button type="button" class="filter-btn" data-filter="print" role="tab">Print</button>
+      </div>
+
+      <div class="work__grid">
+        <button type="button" class="project project--lg" data-reveal
+          data-project
+          data-categories="branding packaging"
+          data-images="assets/truenature-packaging.png,assets/truenature-branding.png"
+          data-title="True Nature — Markenwelt &amp; Packaging"
+          data-tags="Branding,Packaging,2024–2025"
+          data-desc="Komplette Erscheinung einer Naturkosmetik-Marke. Visual Identity, Verpackungsdesign für ein wachsendes Produktsortiment, Touchpoints von Etikett bis Außenverpackung.">
+          <div class="project__media">
+            <img src="assets/truenature-packaging.png" alt="True Nature Packaging Design" loading="lazy" />
+            <span class="project__expand" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+            </span>
+          </div>
+          <div class="project__info">
+            <div class="project__tags">
+              <span>Branding</span><span>Packaging</span><span>2024–2025</span>
+            </div>
+            <h3>True Nature — Markenwelt &amp; Packaging</h3>
+            <p>Komplette Erscheinung einer Naturkosmetik-Marke. Visual Identity, Verpackungsdesign für ein wachsendes Produktsortiment.</p>
+            <span class="project__cta">Projekt ansehen <svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" stroke-width="2"/></svg></span>
+          </div>
+        </button>
+
+        <button type="button" class="project" data-reveal
+          data-project
+          data-categories="digital branding"
+          data-images="assets/truenature-instagram.png"
+          data-title="True Nature — Instagram"
+          data-tags="Social,Content"
+          data-desc="Visuelles System für wiederkehrende Content-Formate, Story-Templates und Reels-Cover. Konsistenz über alle Kanäle hinweg.">
+          <div class="project__media">
+            <img src="assets/truenature-instagram.png" alt="True Nature Social-Media Content" loading="lazy" />
+            <span class="project__expand" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+            </span>
+          </div>
+          <div class="project__info">
+            <div class="project__tags"><span>Social</span><span>Content</span></div>
+            <h3>True Nature — Instagram</h3>
+            <p>Visuelles System für wiederkehrende Content-Formate.</p>
+          </div>
+        </button>
+
+        <button type="button" class="project" data-reveal
+          data-project
+          data-categories="ux-ui digital"
+          data-images="assets/kraftvolles-glasgesicht.png"
+          data-title="Kraftvolles Glasgesicht"
+          data-tags="E-Commerce,Landingpage,2024"
+          data-desc="Konversionsstarke Landingpage für einen Buch-Launch. Klar strukturierte Sales-Argumente, Social Proof und ein durchdachter Funnel.">
+          <div class="project__media">
+            <img src="assets/kraftvolles-glasgesicht.png" alt="Kraftvolles Glasgesicht Landingpage" loading="lazy" />
+            <span class="project__expand" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+            </span>
+          </div>
+          <div class="project__info">
+            <div class="project__tags"><span>E-Commerce</span><span>Landingpage</span></div>
+            <h3>Kraftvolles Glasgesicht</h3>
+            <p>Konversionsstarke Landingpage für ein Buch-Launch.</p>
+          </div>
+        </button>
+
+        <button type="button" class="project" data-reveal
+          data-project
+          data-categories="ux-ui"
+          data-images="assets/truenature-landingpage.png"
+          data-title="True Nature — Webshop"
+          data-tags="Web,UX/UI,Shopify"
+          data-desc="Landingpage- und Webshop-Architektur. Figma-Prototyping, Conversion-Pfade, modulares Sektion-System für leichte Pflege durch das interne Team.">
+          <div class="project__media">
+            <img src="assets/truenature-landingpage.png" alt="True Nature Webshop & Landingpage" loading="lazy" />
+            <span class="project__expand" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+            </span>
+          </div>
+          <div class="project__info">
+            <div class="project__tags"><span>Web</span><span>UX/UI</span></div>
+            <h3>True Nature — Webshop</h3>
+            <p>Landingpage- und Webshop-Architektur, Figma-Prototyping.</p>
+          </div>
+        </button>
+
+        <button type="button" class="project project--lg" data-reveal
+          data-project
+          data-categories="ux-ui"
+          data-images="assets/buddyfinder-screens.png,assets/buddyfinder-overview.png"
+          data-title="Buddy Finder — App-Redesign"
+          data-tags="UX/UI,Mobile App,2025"
+          data-desc="Konzept &amp; Redesign einer App, die Hundebesitzer in der Nachbarschaft verbindet. Neues visuelles System, klare Information Architecture und ausgebauter Funktionsumfang — vom Onboarding bis zur Karten-Ansicht.">
+          <div class="project__media">
+            <img src="assets/buddyfinder-screens.png" alt="Buddy Finder App Screens" loading="lazy" />
+            <span class="project__expand" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+            </span>
+          </div>
+          <div class="project__info">
+            <div class="project__tags">
+              <span>UX/UI</span><span>Mobile App</span><span>2025</span>
+            </div>
+            <h3>Buddy Finder — App-Redesign</h3>
+            <p>Konzept &amp; Redesign einer App, die Hundebesitzer in der Nachbarschaft verbindet. Neues visuelles System, klare Information Architecture und ausgebauter Funktionsumfang.</p>
+            <span class="project__cta">Case Study ansehen <svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" stroke-width="2"/></svg></span>
+          </div>
+        </button>
+
+        <button type="button" class="project" data-reveal
+          data-project
+          data-categories="print branding"
+          data-images="assets/truenature-merch.png"
+          data-title="True Nature — Merch"
+          data-tags="Merch,Print"
+          data-desc="Tote Bags, Apparel und Streuartikel im Markenlook. Print-Produktion, Druckdaten-Erstellung und Veredelung.">
+          <div class="project__media">
+            <img src="assets/truenature-merch.png" alt="True Nature Merchandising" loading="lazy" />
+            <span class="project__expand" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+            </span>
+          </div>
+          <div class="project__info">
+            <div class="project__tags"><span>Merch</span><span>Print</span></div>
+            <h3>True Nature — Merch</h3>
+            <p>Tote Bags, Apparel und Streuartikel im Markenlook.</p>
+          </div>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="contact">
+    <div class="container">
+      <div class="contact__inner" data-reveal>
+        <span class="eyebrow eyebrow--light">05 — Kontakt</span>
+        <h2 class="contact__title">
+          Lass uns <span class="text-underline">etwas</span><br/>
+          gemeinsam bauen.
+        </h2>
+        <p class="contact__lead">
+          Egal ob Branding, Packaging oder digitales Produkt — schreib mir,
+          und wir besprechen dein Projekt bei einem Kaffee.
+        </p>
+
+        <div class="contact__actions">
+          <a href="mailto:christofneessen@gmail.com" class="btn btn--inverse btn--lg" data-magnetic>
+            christofneessen@gmail.com
+            <svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" stroke-width="2"/></svg>
+          </a>
+        </div>
+
+        <div class="contact__bg-text" aria-hidden="true">SAY HI ✦</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <span>© 2026 Christof Neessen</span>
+      <span>Köln · Designed &amp; built with care</span>
+      <a href="#top" class="footer__top">Nach oben ↑</a>
+    </div>
+  </footer>
+
+  <!-- Klaus — der CTA-Conférencier -->
+  <div class="klaus" id="klaus" aria-hidden="true">
+    <span class="klaus__bubble">Cursor geklaut!</span>
+    <svg class="klaus__char" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <!-- Stern-Körper -->
+      <path class="klaus__body" fill="#2640e8" d="M864.6315508,370.2118994c-55.5700684-14.2299805-117.9100342-16.1799927-172.9599609-30.039978-17.6900635-4.460022-32.5600586-14.7700195-42.130127-30.3600464-1.8999023-3.0899658-3.7598877-6.2199707-5.5898438-9.3800049-26.25-45.2599487-46.4400635-97.2099609-74.0500488-141.6599731-20.7099609-27.1500244-61.4599609-33.5700073-90.0700684-15.1599731-14.4699707,9.3099976-20.5799561,21.6299438-28.4799805,36.1099854-22.75,41.6799927-43.0100098,90.2799683-67.6300049,130.0899658-.9799805,1.5599976-2.1700439,3.4200439-3.4300537,5.2600098-1.6899414,2.4500122-3.5198975,4.8699951-5.1699219,6.5800171-9.8900146,10.1500244-24.0400391,16.5499878-37.7299805,19.6099854-26.3699951,5.8900146-53.9200439,9.9100342-81.5,13.9000244-25.0400391,3.6199951-50.1000977,7.2199707-74.3300781,12.1900024-63.4099121,12.9699707-77.7999268,80.5100098-29.3798828,120.8099976,32.1899414,37.4400024,76.539917,69.6799927,108.0699463,106.789978,14.7000732,17.2999878,18.789917,33.4100342,16.2700195,55.8599854-5.75,51.4199829-23.5200195,107.6300049-27.4700928,158.3800049-2.6499023,34.0800171,16.960083,65.5300293,51.3300781,72.5599976,25.1999512,5.1500244,39.3699951-3.7000122,60.7299805-14.539978,48.4599609-24.6300049,94.8599854-55.5300293,145.7600098-74.3600464,11.6699219-.6599731,23.0300293-.5799561,33.9699707,3.9800415l156.9899902,82.9299927c49.4599609,14.3200073,90.4400635-20.75,86.2199707-71.7299805-4.2199707-50.8400269-22.7199707-106.3500366-27.3498535-157.1900024-1.7700195-19.4199829,1.0799561-36.4000244,13.4199219-51.6500244.0800781-.0899658.1500244-.1900024.2299805-.2799683,33.2099609-40.5599976,83.0600586-78.9800415,119.3500977-117.9200439,34.1098633-36.5899658,23.1599121-94.6099854-25.0700684-110.7799683ZM726.7615557,416.4618994c48.789917,53.5200195,28.5299072,140.1300049-38.4200439,166.3300171-90.0899658,35.2799683-175.8499756-58.5599976-131.5300293-144.710022,33.3100586-64.7600098,121.1401367-75.1699829,169.9500732-21.6199951ZM379.2615557,381.8218848c82.3099365-3.2399902,135.8099365,85.0599976,94.9200439,156.8699951-37.3901367,65.6799927-132.4400635,69.3500366-175.5700684,7.3600464-46.8200684-67.2800293-1.0600586-161.0100098,80.6500244-164.2300415Z"/>
+      <!-- Augen-Weiß -->
+      <path fill="#fff" d="M474.1815996,538.6918799c-37.3901367,65.6799927-132.4400635,69.3500366-175.5700684,7.3600464-46.8200684-67.2800293-1.0600586-161.0100098,80.6500244-164.2300415,82.3099365-3.2399902,135.8099365,85.0599976,94.9200439,156.8699951Z"/>
+      <path fill="#fff" d="M688.3415117,582.7919165c-90.0899658,35.2799683-175.8499756-58.5599976-131.5300293-144.710022,33.3100586-64.7600098,121.1401367-75.1699829,169.9500732-21.6199951,48.789917,53.5200195,28.5299072,140.1300049-38.4200439,166.3300171Z"/>
+      <!-- Pupillen (animiert) -->
+      <g class="klaus__pupils">
+        <path class="klaus__pupil klaus__pupil--l" d="M396.6715899,474.3619239c-30.6600342,41.1900024,26.4599609,87.4599609,60.1699219,52.9099731,39.1999512-40.1500244-27.1599121-97.2700195-60.1699219-52.9099731ZM444.7016192,496.0419165c-16.0200195,2.3999634-18.1201172-20.6400146-3.5600586-22.0599976,13.8000488-1.3600464,17.3699951,20.0099487,3.5600586,22.0599976Z"/>
+        <path class="klaus__pupil klaus__pupil--r" d="M674.4616289,409.4219214c-46.8701172,7.9099731-38.9300537,87.1999512,16.5098877,78.4599609,49.3399658-7.789978,40.0100098-88.0100098-16.5098877-78.4599609ZM703.7116289,443.9318701c-16.1201172,9.6900024-24.2200928-16.8599854-9.4901123-20.0599976,12.5300293-2.7399902,20.7800293,13.2600098,9.4901123,20.0599976Z"/>
+      </g>
+    </svg>
+    <span class="klaus__loot" aria-hidden="true">
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path d="M3 2 L3 18 L7 14 L10 21 L13 19.5 L10 13 L16 13 Z" fill="#0A0A1A" stroke="#F6F5F1" stroke-width="1.2" stroke-linejoin="round"/>
+      </svg>
+    </span>
+  </div>
+
+  <!-- Project Lightbox -->
+  <div class="lightbox" id="lightbox" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="lightbox-title">
+    <div class="lightbox__backdrop" data-close></div>
+    <button class="lightbox__close" type="button" data-close aria-label="Schließen">
+      <svg viewBox="0 0 24 24" fill="none"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+    </button>
+    <div class="lightbox__inner">
+      <div class="lightbox__media">
+        <img class="lightbox__img" src="" alt="" />
+      </div>
+      <aside class="lightbox__info">
+        <div class="lightbox__tags"></div>
+        <h2 class="lightbox__title" id="lightbox-title"></h2>
+        <p class="lightbox__desc"></p>
+        <div class="lightbox__nav">
+          <button type="button" class="lightbox__nav-btn" data-prev aria-label="Vorheriges Bild">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M15 18l-6-6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <span class="lightbox__counter">1 / 1</span>
+          <button type="button" class="lightbox__nav-btn" data-next aria-label="Nächstes Bild">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M9 18l6-6-6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
