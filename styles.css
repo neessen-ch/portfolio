@@ -153,13 +153,17 @@ button { font: inherit; border: 0; background: none; cursor: pointer; color: inh
 .nav__logo {
   display: flex;
   align-items: center;
-  gap: 10px;
-  font-weight: 700;
-  font-size: 16px;
-  color: var(--ink);
+  gap: 12px;
+  font-weight: 800;
+  font-size: clamp(26px, 3vw, 36px);
+  letter-spacing: -0.025em;
+  line-height: 1;
+  color: var(--blue);
+  transition: color 0.25s var(--ease);
 }
+.nav__logo:hover { color: var(--blue-dark); }
 .nav__logo .sparkle--small {
-  width: 26px; height: 26px;
+  width: 32px; height: 32px;
   animation: spin 14s linear infinite;
   display: block;
 }
@@ -199,15 +203,49 @@ button { font: inherit; border: 0; background: none; cursor: pointer; color: inh
 .nav__burger {
   display: none;
   flex-direction: column;
+  justify-content: center;
   gap: 5px;
   width: 32px;
+  height: 32px;
+  z-index: 110;
+  position: relative;
+  padding: 0;
 }
 .nav__burger span {
   display: block;
   height: 2px;
+  width: 100%;
   background: var(--ink);
   border-radius: 2px;
-  transition: transform 0.3s var(--ease);
+  transform-origin: center;
+  transition: transform 0.35s var(--ease), opacity 0.25s var(--ease);
+}
+.nav__burger.is-open span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+.nav__burger.is-open span:nth-child(2) {
+  opacity: 0;
+  transform: scaleX(0);
+}
+.nav__burger.is-open span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+/* Backdrop hinter dem mobilen Menü */
+.nav__backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(10, 10, 26, 0.45);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  opacity: 0;
+  pointer-events: none;
+  z-index: 99;
+  transition: opacity 0.3s var(--ease);
+}
+.nav__backdrop.is-visible {
+  opacity: 1;
+  pointer-events: auto;
 }
 
 /* =====================================================
@@ -502,7 +540,7 @@ button { font: inherit; border: 0; background: none; cursor: pointer; color: inh
    About
    ===================================================== */
 .about {
-  padding: 140px 0;
+  padding: 90px 0;
   background: var(--bg);
 }
 .about__grid {
@@ -663,7 +701,7 @@ a.contact-card--lead:hover .contact-card__arrow {
    Disciplines (Skills)
    ===================================================== */
 .disciplines {
-  padding: 140px 0;
+  padding: 90px 0;
   background: var(--bg);
 }
 .disciplines__head {
@@ -741,7 +779,7 @@ a.contact-card--lead:hover .contact-card__arrow {
    Skills (now Tools)
    ===================================================== */
 .skills {
-  padding: 140px 0;
+  padding: 90px 0;
   background: var(--ink);
   color: #fff;
   position: relative;
@@ -833,7 +871,7 @@ a.contact-card--lead:hover .contact-card__arrow {
    Work
    ===================================================== */
 .work {
-  padding: 140px 0;
+  padding: 90px 0;
   background: var(--bg);
 }
 .work__head {
@@ -1084,6 +1122,125 @@ a.contact-card--lead:hover .contact-card__arrow {
   transition: color 0.2s var(--ease);
 }
 .footer__top:hover { color: var(--blue); }
+.footer__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600;
+  color: var(--ink);
+  transition: color 0.2s var(--ease);
+}
+.footer__link svg { width: 16px; height: 16px; }
+.footer__link:hover { color: var(--blue); }
+.footer__link-plain {
+  font-weight: 500;
+  color: var(--muted);
+  transition: color 0.2s var(--ease);
+}
+.footer__link-plain:hover { color: var(--blue); }
+
+/* Klaus-Toggle */
+.klaus-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: var(--muted);
+  padding: 4px 0;
+  transition: color 0.2s var(--ease);
+}
+.klaus-toggle:hover { color: var(--blue); }
+.klaus-toggle__dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--blue);
+  box-shadow: 0 0 0 2px rgba(38, 65, 232, 0.18);
+  transition: background 0.25s var(--ease), box-shadow 0.25s var(--ease);
+}
+.klaus-toggle[aria-pressed="false"] .klaus-toggle__dot {
+  background: transparent;
+  box-shadow: inset 0 0 0 1.5px var(--muted);
+}
+.klaus-toggle:hover .klaus-toggle__dot {
+  box-shadow: 0 0 0 4px rgba(38, 65, 232, 0.18);
+}
+
+/* =====================================================
+   Legal Pages (Impressum, Datenschutz)
+   ===================================================== */
+body.legal-page {
+  background: var(--bg);
+}
+body.legal-page .nav { background: rgba(246, 245, 241, 0.85); backdrop-filter: blur(18px); -webkit-backdrop-filter: blur(18px); border-bottom: 1px solid var(--line); }
+.legal {
+  padding: 140px 0 90px;
+}
+.legal__back {
+  display: inline-block;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  color: var(--muted);
+  margin-bottom: 32px;
+  transition: color 0.2s var(--ease);
+}
+.legal__back:hover { color: var(--blue); }
+.legal__title {
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  font-weight: 800;
+  letter-spacing: -0.025em;
+  line-height: 1.02;
+  color: var(--blue);
+  margin-bottom: 60px;
+  max-width: 820px;
+}
+.legal__section {
+  max-width: 760px;
+  margin-bottom: 40px;
+}
+.legal__section h2 {
+  font-size: clamp(1.2rem, 2vw, 1.5rem);
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: var(--ink);
+  margin-bottom: 14px;
+}
+.legal__section p,
+.legal__section li {
+  color: var(--ink-soft);
+  line-height: 1.65;
+  font-size: 16px;
+}
+.legal__section p { margin-bottom: 12px; }
+.legal__section ul {
+  margin: 8px 0 16px 22px;
+}
+.legal__section li {
+  list-style: disc;
+  margin-bottom: 6px;
+}
+.legal__section a {
+  color: var(--blue);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-thickness: 1px;
+}
+.legal__section a:hover { color: var(--blue-dark); }
+.legal__section strong { color: var(--ink); font-weight: 700; }
+.legal__updated {
+  margin-top: 60px;
+  font-size: 13px;
+  color: var(--muted);
+  font-style: italic;
+}
+@media (max-width: 768px) {
+  .legal { padding: 100px 0 60px; }
+  .legal__title { margin-bottom: 36px; }
+  .legal__section { margin-bottom: 28px; }
+}
 
 /* =====================================================
    Klaus — der Cursor-Dieb
@@ -1552,13 +1709,73 @@ body.lightbox-open { overflow: hidden; }
 @media (max-width: 768px) {
   .container { padding: 0 22px; }
   .nav { padding: 18px 22px; }
-  .nav__links { display: none; }
   .nav__burger { display: flex; }
-  .hero { padding: 120px 22px 80px; min-height: auto; }
-  .hero__sparkle { width: 50px; height: 50px; top: -10px; left: 0; }
-  .hero__meta { gap: 32px; }
+
+  /* Mobile-Menü als slide-in von rechts */
+  .nav__links {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: min(82vw, 320px);
+    background: var(--bg-card);
+    padding: 100px 32px 32px;
+    border-left: 1px solid var(--line);
+    box-shadow: -20px 0 40px rgba(10, 10, 26, 0.08);
+    transform: translateX(100%);
+    transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+    z-index: 100;
+  }
+  .nav__links.is-open { transform: translateX(0); }
+  .nav__links a {
+    width: 100%;
+    padding: 14px 0;
+    font-size: 18px;
+    border-bottom: 1px solid var(--line);
+  }
+  .nav__links a:last-child { border-bottom: 0; }
+  .nav__links a:not(.nav__cta)::after { display: none; }
+  .nav__links .nav__cta {
+    margin-top: 18px;
+    padding: 14px 22px;
+    text-align: center;
+    align-self: stretch;
+  }
+
+  body.nav-open { overflow: hidden; }
+
+  /* Hero & Star-Position auf Mobile entzerren */
+  .hero { padding: 100px 22px 70px; min-height: auto; }
+  .hero__sparkle {
+    width: 64px; height: 64px;
+    top: 6vh;
+    right: 8px;
+    left: auto;
+  }
+  .hero__sparkle--alt { display: none; } /* zweiter Stern entfällt auf Mobile */
+  .hero__meta { gap: 28px; }
   .hero__scroll { display: none; }
-  .about, .skills, .work { padding: 90px 0; }
+
+  /* Section-Spacing kompakter auf Mobile */
+  .about, .disciplines, .work { padding: 60px 0; }
+  .skills { padding: 50px 0; } /* Tools kompakter */
+  .disciplines__head, .work__head { margin-bottom: 36px; }
+  .skills__head { margin-bottom: 28px; }
+  .about__lead { margin: 24px 0 32px; }
+  .about__contact { margin-bottom: 32px; }
+  /* Tools-Karten kompakter */
+  .skills__grid { gap: 14px; }
+  .skill-card { padding: 22px 20px; }
+  .skill-card__icon { margin-bottom: 18px; width: 40px; height: 40px; }
+  .skill-card h3 { font-size: 18px; margin-bottom: 12px; }
+  .skill-card ul { gap: 6px; }
+  .skill-card li { font-size: 14px; }
+
+  .marquee { padding: 22px 0; }
   .marquee__track { font-size: 1.4rem; }
   .contact__inner { padding: 60px 28px; }
 }

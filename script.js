@@ -75,6 +75,45 @@
     updateProgress();
   }
 
+  // ---------- Mobile Hamburger Menu ----------
+  const burger = document.getElementById('nav-burger');
+  const navLinks = document.getElementById('nav-links');
+  const backdrop = document.getElementById('nav-backdrop');
+  if (burger && navLinks) {
+    const closeMenu = () => {
+      burger.classList.remove('is-open');
+      navLinks.classList.remove('is-open');
+      if (backdrop) backdrop.classList.remove('is-visible');
+      burger.setAttribute('aria-expanded', 'false');
+      burger.setAttribute('aria-label', 'Menü öffnen');
+      document.body.classList.remove('nav-open');
+    };
+    const openMenu = () => {
+      burger.classList.add('is-open');
+      navLinks.classList.add('is-open');
+      if (backdrop) backdrop.classList.add('is-visible');
+      burger.setAttribute('aria-expanded', 'true');
+      burger.setAttribute('aria-label', 'Menü schließen');
+      document.body.classList.add('nav-open');
+    };
+    burger.addEventListener('click', () => {
+      if (burger.classList.contains('is-open')) closeMenu(); else openMenu();
+    });
+    if (backdrop) backdrop.addEventListener('click', closeMenu);
+    // Beim Klick auf einen Nav-Link: Menü schließen (Smooth-Scroll läuft danach)
+    navLinks.querySelectorAll('a').forEach((a) => {
+      a.addEventListener('click', () => closeMenu());
+    });
+    // Esc schließt
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && burger.classList.contains('is-open')) closeMenu();
+    });
+    // Bei Resize über Breakpoint: Menü schließen
+    window.addEventListener('resize', () => {
+      if (window.innerWidth > 768 && burger.classList.contains('is-open')) closeMenu();
+    });
+  }
+
   // ---------- Nav background on scroll ----------
   const nav = document.querySelector('.nav');
   const onScroll = () => {
@@ -206,9 +245,34 @@
     }, { passive: true });
   }
 
+  // ---------- Klaus-Toggle (Footer) ----------
+  const KLAUS_STORAGE_KEY = 'klaus-disabled';
+  const isKlausDisabled = () => localStorage.getItem(KLAUS_STORAGE_KEY) === '1';
+
+  const klausToggle = document.getElementById('klaus-toggle');
+  if (klausToggle) {
+    const label = klausToggle.querySelector('.klaus-toggle__label');
+    const updateToggleUI = () => {
+      const disabled = isKlausDisabled();
+      klausToggle.setAttribute('aria-pressed', disabled ? 'false' : 'true');
+      if (label) label.textContent = disabled ? 'Klaus aktivieren' : 'Klaus pausieren';
+    };
+    updateToggleUI();
+    klausToggle.addEventListener('click', () => {
+      if (isKlausDisabled()) {
+        localStorage.removeItem(KLAUS_STORAGE_KEY);
+      } else {
+        localStorage.setItem(KLAUS_STORAGE_KEY, '1');
+      }
+      updateToggleUI();
+      // Sauberster Weg: Seite neu laden — danach ist der neue Status aktiv
+      location.reload();
+    });
+  }
+
   // ---------- Klaus, der Cursor-Dieb ----------
   const klaus = document.getElementById('klaus');
-  if (klaus && !isTouch && !reduceMotion) {
+  if (klaus && !isTouch && !reduceMotion && !isKlausDisabled()) {
     const IDLE_MS = 10000;
     const SPEED = 240; // px/s
     const PEEK_DELAY_MIN = 2500;

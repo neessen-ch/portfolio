@@ -3,8 +3,62 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Christof Neessen — Grafik &amp; UX/UI Design</title>
-  <meta name="description" content="Portfolio von Christof Neessen — Branding, Packaging, UX/UI und digitales Design mit Liebe zum Detail." />
+  <title>Christof Neessen — Branding, Packaging &amp; UX/UI Design</title>
+  <meta name="description" content="Portfolio von Christof Neessen — Designer mit 7+ Jahren Erfahrung in Branding, Packaging, UX/UI und digitalem Design. Köln, Deutschland." />
+  <meta name="author" content="Christof Neessen" />
+  <meta name="theme-color" content="#2641E8" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+
+  <!-- Open Graph (Facebook, LinkedIn, WhatsApp …) -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Christof Neessen — Branding, Packaging &amp; UX/UI Design" />
+  <meta property="og:description" content="Portfolio eines Designers mit 7+ Jahren Erfahrung. Branding, Packaging, UX/UI und digitales Design." />
+  <meta property="og:url" content="https://neessen.be/" />
+  <meta property="og:site_name" content="Christof Neessen" />
+  <meta property="og:locale" content="de_DE" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Christof Neessen — Branding, Packaging &amp; UX/UI Design" />
+  <meta name="twitter:description" content="Portfolio eines Designers mit 7+ Jahren Erfahrung. Branding, Packaging, UX/UI und digitales Design." />
+
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://neessen.be/" />
+
+  <!-- Strukturierte Daten für Google (schema.org Person) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Christof Neessen",
+    "jobTitle": "Grafik Designer mit UX/UI-Weiterbildung",
+    "url": "https://neessen.be/",
+    "image": "https://neessen.be/assets/christof-portrait.jpg",
+    "email": "christof@neessen.be",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Köln",
+      "addressCountry": "DE"
+    },
+    "sameAs": [
+      "https://www.linkedin.com/in/christof-neessen/"
+    ],
+    "knowsAbout": [
+      "Branding",
+      "Packaging Design",
+      "UX/UI Design",
+      "Visual Identity",
+      "Print Design",
+      "Web Design",
+      "E-Commerce"
+    ],
+    "knowsLanguage": ["de", "en", "fr", "es"]
+  }
+  </script>
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
@@ -22,19 +76,20 @@
   <header class="nav">
     <a href="#top" class="nav__logo">
       <img class="sparkle sparkle--small" src="assets/Sterne-01.svg" alt="" />
-      <span>Christof Neessen</span>
+      <span>neessen</span>
     </a>
-    <nav class="nav__links">
+    <nav class="nav__links" id="nav-links">
       <a href="#about" data-link>Über mich</a>
       <a href="#skills" data-link>Skills</a>
       <a href="#tools" data-link>Tools</a>
       <a href="#work" data-link>Projekte</a>
       <a href="#contact" data-link class="nav__cta">Kontakt →</a>
     </nav>
-    <button class="nav__burger" aria-label="Menü öffnen">
-      <span></span><span></span>
+    <button class="nav__burger" id="nav-burger" aria-label="Menü öffnen" aria-expanded="false" aria-controls="nav-links">
+      <span></span><span></span><span></span>
     </button>
   </header>
+  <div class="nav__backdrop" id="nav-backdrop" aria-hidden="true"></div>
 
   <!-- Hero -->
   <section id="top" class="hero">
@@ -103,7 +158,7 @@
     <div class="container about__grid">
       <div class="about__media" data-reveal>
         <div class="about__photo">
-          <img src="assets/christof-portrait.png" alt="Porträt von Christof Neessen" />
+          <img src="assets/christof-portrait.jpg" alt="Porträt von Christof Neessen" />
         </div>
         <img class="about__deco" src="assets/Sterne-03.svg" alt="" />
       </div>
@@ -122,9 +177,9 @@
         </p>
 
         <div class="about__contact" data-reveal>
-          <a href="mailto:christofneessen@gmail.com" class="contact-card contact-card--lead">
+          <a href="mailto:christof@neessen.be" class="contact-card contact-card--lead">
             <span class="contact-card__label">Schreib mir</span>
-            <span class="contact-card__value">christofneessen@gmail.com</span>
+            <span class="contact-card__value">christof@neessen.be</span>
             <svg class="contact-card__arrow" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
           </a>
         </div>
@@ -260,12 +315,12 @@
         <button type="button" class="project project--lg" data-reveal
           data-project
           data-categories="branding packaging"
-          data-images="assets/truenature-packaging.png,assets/truenature-branding.png"
+          data-images="assets/truenature-packaging.jpg,assets/truenature-branding.jpg"
           data-title="True Nature — Markenwelt &amp; Packaging"
           data-tags="Branding,Packaging,2024–2025"
           data-desc="Komplette Erscheinung einer Naturkosmetik-Marke. Visual Identity, Verpackungsdesign für ein wachsendes Produktsortiment, Touchpoints von Etikett bis Außenverpackung.">
           <div class="project__media">
-            <img src="assets/truenature-packaging.png" alt="True Nature Packaging Design" loading="lazy" />
+            <img src="assets/truenature-packaging.jpg" alt="True Nature Packaging Design" loading="lazy" />
             <span class="project__expand" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
             </span>
@@ -283,12 +338,12 @@
         <button type="button" class="project" data-reveal
           data-project
           data-categories="digital branding"
-          data-images="assets/truenature-instagram.png"
+          data-images="assets/truenature-instagram.jpg"
           data-title="True Nature — Instagram"
           data-tags="Social,Content"
           data-desc="Visuelles System für wiederkehrende Content-Formate, Story-Templates und Reels-Cover. Konsistenz über alle Kanäle hinweg.">
           <div class="project__media">
-            <img src="assets/truenature-instagram.png" alt="True Nature Social-Media Content" loading="lazy" />
+            <img src="assets/truenature-instagram.jpg" alt="True Nature Social-Media Content" loading="lazy" />
             <span class="project__expand" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
             </span>
@@ -303,12 +358,12 @@
         <button type="button" class="project" data-reveal
           data-project
           data-categories="ux-ui digital"
-          data-images="assets/kraftvolles-glasgesicht.png"
+          data-images="assets/kraftvolles-glasgesicht.jpg"
           data-title="Kraftvolles Glasgesicht"
           data-tags="E-Commerce,Landingpage,2024"
           data-desc="Konversionsstarke Landingpage für einen Buch-Launch. Klar strukturierte Sales-Argumente, Social Proof und ein durchdachter Funnel.">
           <div class="project__media">
-            <img src="assets/kraftvolles-glasgesicht.png" alt="Kraftvolles Glasgesicht Landingpage" loading="lazy" />
+            <img src="assets/kraftvolles-glasgesicht.jpg" alt="Kraftvolles Glasgesicht Landingpage" loading="lazy" />
             <span class="project__expand" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
             </span>
@@ -323,12 +378,12 @@
         <button type="button" class="project" data-reveal
           data-project
           data-categories="ux-ui"
-          data-images="assets/truenature-landingpage.png"
+          data-images="assets/truenature-landingpage.jpg"
           data-title="True Nature — Webshop"
           data-tags="Web,UX/UI,Shopify"
           data-desc="Landingpage- und Webshop-Architektur. Figma-Prototyping, Conversion-Pfade, modulares Sektion-System für leichte Pflege durch das interne Team.">
           <div class="project__media">
-            <img src="assets/truenature-landingpage.png" alt="True Nature Webshop & Landingpage" loading="lazy" />
+            <img src="assets/truenature-landingpage.jpg" alt="True Nature Webshop & Landingpage" loading="lazy" />
             <span class="project__expand" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
             </span>
@@ -343,12 +398,12 @@
         <button type="button" class="project project--lg" data-reveal
           data-project
           data-categories="ux-ui"
-          data-images="assets/buddyfinder-screens.png,assets/buddyfinder-overview.png"
+          data-images="assets/buddyfinder-screens.jpg,assets/buddyfinder-overview.jpg"
           data-title="Buddy Finder — App-Redesign"
           data-tags="UX/UI,Mobile App,2025"
           data-desc="Konzept &amp; Redesign einer App, die Hundebesitzer in der Nachbarschaft verbindet. Neues visuelles System, klare Information Architecture und ausgebauter Funktionsumfang — vom Onboarding bis zur Karten-Ansicht.">
           <div class="project__media">
-            <img src="assets/buddyfinder-screens.png" alt="Buddy Finder App Screens" loading="lazy" />
+            <img src="assets/buddyfinder-screens.jpg" alt="Buddy Finder App Screens" loading="lazy" />
             <span class="project__expand" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
             </span>
@@ -366,12 +421,12 @@
         <button type="button" class="project" data-reveal
           data-project
           data-categories="print branding"
-          data-images="assets/truenature-merch.png"
+          data-images="assets/truenature-merch.jpg"
           data-title="True Nature — Merch"
           data-tags="Merch,Print"
           data-desc="Tote Bags, Apparel und Streuartikel im Markenlook. Print-Produktion, Druckdaten-Erstellung und Veredelung.">
           <div class="project__media">
-            <img src="assets/truenature-merch.png" alt="True Nature Merchandising" loading="lazy" />
+            <img src="assets/truenature-merch.jpg" alt="True Nature Merchandising" loading="lazy" />
             <span class="project__expand" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
             </span>
@@ -401,8 +456,8 @@
         </p>
 
         <div class="contact__actions">
-          <a href="mailto:christofneessen@gmail.com" class="btn btn--inverse btn--lg" data-magnetic>
-            christofneessen@gmail.com
+          <a href="mailto:christof@neessen.be" class="btn btn--inverse btn--lg" data-magnetic>
+            christof@neessen.be
             <svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" stroke-width="2"/></svg>
           </a>
         </div>
@@ -416,7 +471,18 @@
   <footer class="footer">
     <div class="container footer__inner">
       <span>© 2026 Christof Neessen</span>
-      <span>Köln · Designed &amp; built with care</span>
+      <a href="datenschutz.html" class="footer__link-plain">Datenschutz</a>
+      <a href="impressum.html" class="footer__link-plain">Impressum</a>
+      <button type="button" class="klaus-toggle" id="klaus-toggle" aria-pressed="true" title="Klaus pausieren oder aktivieren">
+        <span class="klaus-toggle__dot" aria-hidden="true"></span>
+        <span class="klaus-toggle__label">Klaus pausieren</span>
+      </button>
+      <a href="https://www.linkedin.com/in/christof-neessen/" target="_blank" rel="noopener" class="footer__link">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.13 1.45-2.13 2.94v5.67H9.36V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.26 2.37 4.26 5.45v6.29zM5.34 7.43c-1.14 0-2.07-.93-2.07-2.07s.93-2.07 2.07-2.07 2.07.93 2.07 2.07-.93 2.07-2.07 2.07zm1.78 13.02H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0z"/>
+        </svg>
+        LinkedIn
+      </a>
       <a href="#top" class="footer__top">Nach oben ↑</a>
     </div>
   </footer>
